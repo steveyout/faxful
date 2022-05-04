@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as React from 'react';
 import Index from '../../public/ui/landing/index'
 import Dashboard from '../../public/ui/dashboard/index'
+import Nav from '../../public/ui/dashboard/nav'
 import { SnackbarProvider } from 'notistack';
 import {
     BrowserRouter,
@@ -16,7 +17,12 @@ ReactDOM.render(
         <BrowserRouter>
         <Routes>
             <Route path="/faxful/public/" element={<Index/>} />
-            <Route path="/faxful/public/dashboard" element={<Dashboard/>} />
+            <Route path="/faxful/public/dashboard" element={
+                <Nav>
+                <Dashboard/>
+                </Nav>
+            }
+            />
         </Routes>
         </BrowserRouter>
     </SnackbarProvider>
