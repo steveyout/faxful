@@ -516,7 +516,7 @@ export default function login() {
             sx={{
                 display: 'flex',
                 textAlign:'center',
-
+                justifyContent:'center'
 
             }}
         >

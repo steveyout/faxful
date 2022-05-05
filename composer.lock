@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d42b068702b528f75c29acf09d35df27",
+    "content-hash": "7eb0a8a5a24f64ba4c4d04d86ccc089b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1659,6 +1659,56 @@
                 }
             ],
             "time": "2022-04-17T13:12:02+00:00"
+        },
+        {
+            "name": "linwj/coinbase",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zhouaini528/coinbase-php.git",
+                "reference": "589cff052102cc35d42ef2d932ce34754e454023"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zhouaini528/coinbase-php/zipball/589cff052102cc35d42ef2d932ce34754e454023",
+                "reference": "589cff052102cc35d42ef2d932ce34754e454023",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "*",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lin\\Coinbase\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "linwenjun",
+                    "email": "465382251@qq.com"
+                }
+            ],
+            "description": "Coinbase API Like the official document interface, Support for arbitrary extension.",
+            "keywords": [
+                "BitMEX",
+                "Huobi",
+                "OKEX",
+                "binance",
+                "coinbase",
+                "kucoin",
+                "kumex"
+            ],
+            "support": {
+                "issues": "https://github.com/zhouaini528/coinbase-php/issues",
+                "source": "https://github.com/zhouaini528/coinbase-php/tree/1.0.5"
+            },
+            "time": "2021-08-30T00:49:32+00:00"
         },
         {
             "name": "monolog/monolog",

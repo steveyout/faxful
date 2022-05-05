@@ -9,7 +9,7 @@ import Skeleton from '@mui/material/Skeleton';
 import {useEffect, useState} from 'react';
 import Alert from '@mui/material/Alert';
 import Box from "@mui/material/Box";
-import {Button} from "@mui/material";
+import {Button, CardMedia} from "@mui/material";
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import Table from '@mui/material/Table';
@@ -31,6 +31,15 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { alpha } from '@mui/material/styles';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 
 function createData(name, calories, fat, carbs, protein) {
     return {
@@ -490,13 +499,62 @@ function Dashboard () {
                         <Typography variant={'h5'} sx={{marginTop: 2,color:'black'}}>
                            Current plan
                         </Typography>;
+                        <Card sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                height="140"
+                                image="./images/vip1.png"
+                                alt="plan"
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Vip1
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Lizards are a widespread group of squamate reptiles, with over 6,000
+                                    species, ranging across all continents except Antarctica
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button sx={{width:'100%'}} size="small" variant={'outlined'}>Upgrade</Button>
+                            </CardActions>
+                        </Card>
                     </Item>
 
                     {/*activities*/}
-                    <Item>
+                    <Item sx={{color:'black'}}>
                         <Typography variant={'h5'} sx={{marginTop: 2,color:'black'}}>
                             Activities
-                        </Typography>;
+                        </Typography>
+                        <Timeline position="alternate">
+                            <TimelineItem>
+                                <TimelineSeparator>
+                                    <TimelineDot variant="outlined" />
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent>Eat</TimelineContent>
+                            </TimelineItem>
+                            <TimelineItem>
+                                <TimelineSeparator>
+                                    <TimelineDot variant="outlined" color="primary" />
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent>Code</TimelineContent>
+                            </TimelineItem>
+                            <TimelineItem>
+                                <TimelineSeparator>
+                                    <TimelineDot variant="outlined" color="secondary" />
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent>Sleep</TimelineContent>
+                            </TimelineItem>
+                            <TimelineItem>
+                                <TimelineSeparator>
+                                    <TimelineDot variant="outlined" />
+                                </TimelineSeparator>
+                                <TimelineContent>Repeat</TimelineContent>
+                            </TimelineItem>
+                        </Timeline>
                     </Item>
                 </Box>
 
